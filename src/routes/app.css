@@ -1,5 +1,6 @@
-@import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
 
 /* ─── TAILWIND THEME EXTENSION ───────────────────── */
 /* Registers custom fonts so font-mono / font-sans work as Tailwind classes */
@@ -215,3 +216,57 @@ body::after {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+
+.waitlist-input {
+  width: 100%;
+  background: var(--surface2, #0f1923);
+  border: 1px solid #ffffff18;
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text, #e2eaf2);
+  outline: none;
+  transition: border-color .2s;
+  box-sizing: border-box;
+}
+.waitlist-input:focus {
+  border-color: var(--green, #00e57a);
+}
+.waitlist-input::placeholder {
+  color: var(--muted, #5a7080);
+}
+.waitlist-textarea {
+  resize: none;
+  line-height: 1.6;
+}
+.waitlist-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--green, #00e57a);
+  color: #080b0f;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.waitlist-btn:hover:not(:disabled) { opacity: .88; }
+.waitlist-btn:disabled { opacity: .5; cursor: not-allowed; }
+.waitlist-spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #080b0f40;
+  border-top-color: #080b0f;
+  border-radius: 50%;
+  animation: spin .6s linear infinite;
+  display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
