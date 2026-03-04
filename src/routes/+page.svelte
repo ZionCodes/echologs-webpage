@@ -3,7 +3,7 @@
   import Nav        from '$lib/components/Nav.svelte';
   import Hero       from '$lib/components/Hero.svelte';
   import Terminal   from '$lib/components/Terminal.svelte';
-  import ProofStrip from '$lib/components/ProofStrip.svelte';
+  import ProofStrip from '$lib/components/Proofstrip.svelte';
   import Features   from '$lib/components/Features.svelte';
   import HowItWorks from '$lib/components/HowItWorks.svelte';
   import CtaSection from '$lib/components/CtaSection.svelte';
