@@ -6,7 +6,6 @@
   import ProofStrip from '$lib/components/ProofStrip.svelte';
   import Features   from '$lib/components/Features.svelte';
   import HowItWorks from '$lib/components/HowItWorks.svelte';
-  import Pricing    from '$lib/components/Pricing.svelte';
   import CtaSection from '$lib/components/CtaSection.svelte';
   import Footer     from '$lib/components/Footer.svelte';
 
@@ -38,6 +37,5 @@
 <ProofStrip />
 <Features />
 <HowItWorks />
-<Pricing />
 <CtaSection onSubmit={saveToWaitlist} />
 <Footer />
