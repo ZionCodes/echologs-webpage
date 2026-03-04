@@ -1,5 +1,5 @@
 <script>
-    import WaitlistForm from './Waitlistform.svelte';
+    import WaitlistForm from './WaitlistForm.svelte';
   
     const { onSubmit } = $props();
   </script>
