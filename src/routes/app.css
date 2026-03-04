@@ -217,7 +217,6 @@ body::after {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-
 .waitlist-input {
   width: 100%;
   background: var(--surface2, #0f1923);
