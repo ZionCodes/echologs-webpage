@@ -1,7 +1,7 @@
 <script>
     const steps = [
       { num: '01 — INSTALL', title: 'Install the SDK',     desc: 'Add the EchoLogs package to your project. Works with pip or npm.',                    code: 'pip install echologs'    },
-      { num: '02 — WRAP',    title: 'Wrap your script',    desc: 'Add one decorator to your main function. Your logic stays exactly the same.',          code: '@track(script="my-job")' },
+      { num: '02 — WRAP',    title: 'Wrap your script',    desc: 'Add one decorator to your main function. Your logic stays exactly the same.',          code: 'with echologs.run():' },
       { num: '03 — WATCH',   title: 'Watch the dashboard', desc: 'Every execution appears in your dashboard in real time. Slack pings you on failures.', code: '✓ 2.4s — PASS'           },
     ];
   </script>

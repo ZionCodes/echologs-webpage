@@ -27,7 +27,7 @@
       </div>
   
       <p class="fade-5 font-mono text-xs text-(--muted) text-center mt-1">
-        Early access gets 3 months free on Pro. No spam, ever.
+        Early access gets 3 month free on Pro. No spam, ever.
       </p>
     </div>
   </div>

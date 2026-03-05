@@ -21,7 +21,7 @@
     <div style="font-size:14px;font-weight:700;color:var(--green)">You're on the list!</div>
     <div style="font-size:11px;color:var(--muted);text-align:center;line-height:1.7">
       We'll email you the moment EchoLogs launches.<br>
-      Early access gets 1 months free on Pro.
+      Early access gets 3 months free on Pro.
     </div>
   </div>
 {:else}

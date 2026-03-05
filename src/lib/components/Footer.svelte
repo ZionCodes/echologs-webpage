@@ -9,7 +9,7 @@
         echologs
       </div>
       <p class="font-mono text-xs text-(--muted)">
-        Built by a developer who got burned by a silent cron job one too many times.
+        Built by a <a href="https://www.linkedin.com/in/zion-gonet/" target="_blank" class="text-(--green)">developer</a> who got burned by a silent cron job one too many times.
       </p>
       <p class="font-mono text-xs text-(--muted)">© 2026 EchoLogs</p>
     </div>
