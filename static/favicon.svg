@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark background with rounded corners -->
+  <rect width="32" height="32" rx="7" fill="#080b0f"/>
+
+  <!-- Green pulse dot — the "monitor" signal -->
+  <circle cx="8.5" cy="16" r="3.5" fill="#00e57a"/>
+
+  <!-- Horizontal log lines — suggesting output/logs -->
+  <rect x="15" y="11" width="11" height="2" rx="1" fill="#00e57a" opacity="0.9"/>
+  <rect x="15" y="15" width="8" height="2" rx="1" fill="#00e57a" opacity="0.55"/>
+  <rect x="15" y="19" width="10" height="2" rx="1" fill="#00e57a" opacity="0.3"/>
+</svg>
