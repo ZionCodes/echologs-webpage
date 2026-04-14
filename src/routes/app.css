@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+
 @import 'tailwindcss';
 
 
@@ -20,8 +20,8 @@
   --amber:        #d97706;
   --red:          #dc2626;
   --text:         #0f1923;
-  --muted:        #5a7080;
-  --muted2:       #8fa3b0;
+  --muted:        #4a5f6e;
+  --muted2:       #6b8090;
   --grid-color:   #c8d4de;
   --grid-opacity: 0.5;
   --glow-color:   #00a85408;

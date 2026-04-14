@@ -51,7 +51,7 @@
         'Email + Slack alerts',
         'Realtime streaming',
         'Public status pages',
-        'Up to 10 team members',
+        'Up to 10 team members - coming soon ⌛',
       ],
     },
   ]

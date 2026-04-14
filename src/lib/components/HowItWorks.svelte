@@ -1,9 +1,7 @@
 <script>
   let activeLang = $state('python')
 
-  const pythonCode = `from dotenv import load_dotenv
-load_dotenv()
-import echologs
+  const pythonCode = `import echologs
 
 with echologs.run():
     # your existing code — nothing changes
