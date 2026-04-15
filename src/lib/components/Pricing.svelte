@@ -1,13 +1,15 @@
 <script>
+  let billingCycle = $state('monthly') // 'monthly' | 'yearly' | 'lifetime'
+
   const plans = [
     {
       tag: null,
       name: 'FREE',
-      price: '$0',
-      period: 'forever',
       featured: false,
-      cta: 'Get started free',
-      href: 'https://app.echologs.com',
+      price: { monthly: '$0', yearly: '$0', lifetime: '$0' },
+      period: { monthly: 'forever', yearly: 'forever', lifetime: 'forever' },
+      cta: { monthly: 'Get started free', yearly: 'Get started free', lifetime: 'Get started free' },
+      href: { monthly: 'https://app.echologs.com', yearly: 'https://app.echologs.com', lifetime: 'https://app.echologs.com' },
       features: [
         '1,000 executions / month',
         '14-day log retention',
@@ -20,11 +22,12 @@
     {
       tag: 'MOST POPULAR',
       name: 'PRO',
-      price: '$8',
-      period: 'per month',
       featured: true,
-      cta: 'Start Pro',
-      href: 'https://app.echologs.com',
+      price: { monthly: '$8', yearly: '$64', lifetime: '$149' },
+      period: { monthly: 'per month', yearly: 'per year', lifetime: 'one-time' },
+      cta: { monthly: 'Start Pro', yearly: 'Start Pro Yearly', lifetime: 'Get Lifetime Access' },
+      href: { monthly: 'https://app.echologs.com', yearly: 'https://app.echologs.com', lifetime: 'https://app.echologs.com' },
+      savings: { yearly: 'Save $32 — 4 months free', lifetime: 'Never pay again' },
       features: [
         '10,000 executions / month',
         '90-day log retention',
@@ -38,11 +41,12 @@
     {
       tag: null,
       name: 'TEAM',
-      price: '$29',
-      period: 'per month',
       featured: false,
-      cta: 'Start Team',
-      href: 'https://app.echologs.com',
+      price: { monthly: '$29', yearly: '$232', lifetime: '$499' },
+      period: { monthly: 'per month', yearly: 'per year', lifetime: 'one-time' },
+      cta: { monthly: 'Start Team', yearly: 'Start Team Yearly', lifetime: 'Get Team Lifetime' },
+      href: { monthly: 'https://app.echologs.com', yearly: 'https://app.echologs.com', lifetime: 'https://app.echologs.com' },
+      savings: { yearly: 'Save $116 — 4 months free', lifetime: 'Never pay again' },
       features: [
         'Unlimited executions',
         '1-year log retention',
@@ -51,7 +55,7 @@
         'Email + Slack alerts',
         'Realtime streaming',
         'Public status pages',
-        'Up to 10 team members - coming soon ⌛',
+        'Up to 10 team members - coming soon',
       ],
     },
   ]
@@ -60,17 +64,30 @@
 <div id="pricing" class="reveal relative z-10 w-full">
   <div class="w-full max-w-[1100px] mx-auto px-6 py-[60px] lg:py-[88px]">
 
-    <div class="text-center mb-14">
+    <div class="text-center mb-10">
       <p class="font-mono text-[11px] text-(--green) tracking-[2.5px] uppercase mb-3.5">// pricing</p>
       <h2 class="section-heading">Simple pricing.<br>Cancel anytime.</h2>
-      <p class="section-subtext">Start free. Upgrade when your scripts matter enough to pay for visibility.</p>
+      <p class="section-subtext mb-8">Start free. Upgrade when your scripts matter enough to pay for visibility.</p>
+
+      <!-- Toggle -->
+      <div class="inline-flex items-center gap-1 p-1 rounded-xl border border-(--border)" style="background: var(--surface);">
+        {#each [['monthly','Monthly'],['yearly','Yearly'],['lifetime','Lifetime']] as [val,label]}
+          <button
+            onclick={() => billingCycle = val}
+            class="font-mono text-xs font-bold px-5 py-2.5 rounded-lg transition-all duration-150"
+            style="background:{billingCycle===val?'var(--green)':'transparent'};color:{billingCycle===val?'#080b0f':'var(--muted)'};"
+          >
+            {label}
+          </button>
+        {/each}
+      </div>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-[2px] bg-(--border) border border-(--border) rounded-xl overflow-hidden mb-8">
       {#each plans as plan (plan.name)}
         <div
           class="p-9 flex flex-col transition-colors duration-300"
-          style="background: {plan.featured ? 'var(--surface2)' : 'var(--surface)'};"
+          style="background:{plan.featured?'var(--surface2)':'var(--surface)'};"
         >
 
           <div class="h-7 mb-5 flex items-center">
@@ -82,8 +99,16 @@
           </div>
 
           <p class="font-mono text-[13px] text-(--muted) mb-2">{plan.name}</p>
-          <p class="text-[3rem] font-extrabold tracking-[-2px] leading-none mb-1.5">{plan.price}</p>
-          <p class="font-mono text-xs text-(--muted) mb-7">{plan.period}</p>
+
+          <div class="mb-1.5">
+            <span class="text-[3rem] font-extrabold tracking-[-2px] leading-none">
+              {plan.price[billingCycle]}
+            </span>
+          </div>
+
+          <p class="font-mono text-xs text-(--muted) mb-7">
+            {plan.period[billingCycle]}
+          </p>
 
           <ul class="plan-features flex flex-col gap-2.5 mb-8 flex-1">
             {#each plan.features as feat (feat)}
@@ -92,23 +117,18 @@
           </ul>
 
           <a
-            href={plan.href}
+            href={plan.href[billingCycle]}
             class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-mono text-sm font-bold transition-all duration-150 text-center no-underline"
-            style="background: {plan.featured ? 'var(--green)' : 'transparent'}; color: {plan.featured ? '#080b0f' : 'var(--text)'}; border: 1px solid {plan.featured ? 'transparent' : 'var(--border)'};"
+            style="background:{plan.featured?'var(--green)':'transparent'};color:{plan.featured?'#080b0f':'var(--text)'};border:1px solid {plan.featured?'transparent':'var(--border)'};"
           >
-            {plan.cta} →
+            {plan.cta[billingCycle]} →
           </a>
 
         </div>
       {/each}
     </div>
 
-    <p class="text-center font-mono text-xs text-(--muted)">
-      Pro and Team also available as yearly (save 33%) and lifetime plans. &nbsp;
-      <a href="https://app.echologs.com/account" class="text-(--green) hover:underline">
-        See all options →
-      </a>
-    </p>
+
 
   </div>
 </div>

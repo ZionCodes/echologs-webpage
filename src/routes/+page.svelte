@@ -33,7 +33,7 @@
     url:         'https://echologs.com',
     type:        'website',
     site_name:   'EchoLogs',
-    images: [{ url: 'https://echologs.com/og.png', width: 1200, height: 630, alt: 'EchoLogs dashboard' }],
+    images: [{ url: 'https://echologs.com/og.png', width: 1200, height: 630, alt: 'EchoLogs' }],
   }}
   twitter={{
     card:        'summary_large_image',
