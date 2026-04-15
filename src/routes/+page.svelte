@@ -29,7 +29,7 @@
   canonical="https://echologs.com"
   openGraph={{
     title:       "EchoLogs — Know When Your AI Scripts Fail",
-    description: "Every execution logged. Every error captured. Instant alerts when your Python or JS scripts break."",
+    description: "Every execution logged. Every error captured. Instant alerts when your Python or JS scripts break.",
     url:         "https://echologs.com",
     type:        "website",
     site_name:   "EchoLogs",
@@ -39,7 +39,7 @@
     card:        "summary_large_image",
     site:        "@echologs",
     title:       "EchoLogs — Know When Your AI Scripts Fail",
-    description: "Every execution logged. Every error captured. Instant alerts when your Python or JS scripts break."",
+    description: "Every execution logged. Every error captured. Instant alerts when your Python or JS scripts break.",
     image:       "https://echologs.com/og.png",
   }}
 />
