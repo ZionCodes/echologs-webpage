@@ -28,19 +28,19 @@
   description="Every execution logged. Every error captured. Get instant Slack and email alerts when your Python or JavaScript automation scripts break — without changing a line of code."
   canonical="https://echologs.com"
   openGraph={{
-    title:       'EchoLogs — Know When Your AI Scripts Fail',
-    description: 'Every execution logged. Every error captured. Instant alerts when your Python or JS scripts break.',
-    url:         'https://echologs.com',
-    type:        'website',
-    site_name:   'EchoLogs',
-    images: [{ url: 'https://echologs.com/og.png', width: 1200, height: 630, alt: 'EchoLogs' }],
+    title:       "EchoLogs — Know When Your AI Scripts Fail",
+    description: "Every execution logged. Every error captured. Instant alerts when your Python or JS scripts break."",
+    url:         "https://echologs.com",
+    type:        "website",
+    site_name:   "EchoLogs",
+    images: [{ url: "https://echologs.com/og.png", width: 1200, height: 630, alt: 'EchoLogs' }],
   }}
   twitter={{
-    card:        'summary_large_image',
-    site:        '@echologs',
-    title:       'EchoLogs — Know When Your AI Scripts Fail',
-    description: 'Every execution logged. Every error captured. Instant alerts when your Python or JS scripts break.',
-    image:       'https://echologs.com/og.png',
+    card:        "summary_large_image",
+    site:        "@echologs",
+    title:       "EchoLogs — Know When Your AI Scripts Fail",
+    description: "Every execution logged. Every error captured. Instant alerts when your Python or JS scripts break."",
+    image:       "https://echologs.com/og.png",
   }}
 />
 
